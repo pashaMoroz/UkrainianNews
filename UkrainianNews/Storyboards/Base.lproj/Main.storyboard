@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JT7-xf-cg9">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Новости Украина-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="UkrainianNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d6W-xZ-m1r">
+                                <rect key="frame" x="0.0" y="44" width="375" height="617"/>
+                                <color key="backgroundColor" red="0.91738426685333252" green="0.86462181806564331" blue="0.53445881605148315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WSH-kb-nKA">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" reuseIdentifier="cell" id="5xp-og-Mvf" customClass="NewsActionsCell" customModule="UkrainianNews" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="335" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H1x-N8-c7v">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БИЗНЕС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-0K-Egg">
+                                                    <rect key="frame" x="77.5" y="19" width="180.5" height="55"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VTY-0K-Egg" firstAttribute="centerX" secondItem="H1x-N8-c7v" secondAttribute="centerX" id="4Co-bb-kDG"/>
+                                                <constraint firstItem="VTY-0K-Egg" firstAttribute="centerY" secondItem="H1x-N8-c7v" secondAttribute="centerY" id="UvH-Il-KkJ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="335" height="93"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="newsActionLabel" destination="VTY-0K-Egg" id="lNU-db-CPp"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e7Q-Ox-AKo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0QN-gu-Dd0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d6W-xZ-m1r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JAZ-qJ-uhP"/>
+                            <constraint firstItem="d6W-xZ-m1r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TOK-HH-Ty9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d6W-xZ-m1r" secondAttribute="bottom" constant="6" id="haF-dj-FN1"/>
+                            <constraint firstItem="d6W-xZ-m1r" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wcg-gB-uo6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Новости Украина" id="rI2-Qt-d8x"/>
+                    <connections>
+                        <outlet property="collectionView" destination="d6W-xZ-m1r" id="0mT-9h-rOL"/>
+                        <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailBusiness" id="qwT-k0-u41"/>
+                        <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailEntertainment" id="hs1-ch-wAX"/>
+                        <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailHealth" id="BKD-SV-BDn"/>
+                        <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailScience" id="iwO-9v-rsy"/>
+                        <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailSports" id="JaV-11-UFs"/>
+                        <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailTechnology" id="NrM-YD-4mG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938.39999999999998" y="132.68365817091455"/>
+        </scene>
+        <!--News Table View Controller-->
+        <scene sceneID="DIf-lt-1fW">
+            <objects>
+                <tableViewController id="kfd-xU-Duc" customClass="NewsTableViewController" customModule="UkrainianNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ia-TX-KcR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="103" id="6vQ-4D-CDr" customClass="NewsTableViewCell" customModule="UkrainianNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="103"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6vQ-4D-CDr" id="kEs-XC-CJb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5TI-mF-4VH">
+                                            <rect key="frame" x="8" y="8" width="154" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="154" id="9gP-6f-agc"/>
+                                                <constraint firstAttribute="height" constant="90" id="Oqd-K1-Fgs"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="loyer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5nx-cb-7tl">
+                                            <rect key="frame" x="170" y="8" width="197" height="87"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi4-p3-cTk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descript" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmP-pD-ADT">
+                                                    <rect key="frame" x="0.0" y="37" width="197" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Kfg-Hg-ybu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5TI-mF-4VH" firstAttribute="leading" secondItem="kEs-XC-CJb" secondAttribute="leading" constant="8" id="KkT-M9-XmO"/>
+                                        <constraint firstItem="5nx-cb-7tl" firstAttribute="leading" secondItem="5TI-mF-4VH" secondAttribute="trailing" constant="8" id="Mm1-E5-5CV"/>
+                                        <constraint firstItem="5TI-mF-4VH" firstAttribute="top" secondItem="kEs-XC-CJb" secondAttribute="top" constant="8" id="RjS-UU-4tO"/>
+                                        <constraint firstAttribute="bottom" secondItem="5TI-mF-4VH" secondAttribute="bottom" constant="5" id="dxY-j4-26k"/>
+                                        <constraint firstItem="5nx-cb-7tl" firstAttribute="top" secondItem="kEs-XC-CJb" secondAttribute="top" constant="8" id="iyF-T3-bdx"/>
+                                        <constraint firstAttribute="bottom" secondItem="5nx-cb-7tl" secondAttribute="bottom" constant="8" id="l5k-RY-AGd"/>
+                                        <constraint firstAttribute="trailing" secondItem="5nx-cb-7tl" secondAttribute="trailing" constant="8" id="rwF-iw-MMB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsDescript" destination="lmP-pD-ADT" id="dLX-P2-yXP"/>
+                                    <outlet property="newsImage" destination="5TI-mF-4VH" id="UsW-S2-09q"/>
+                                    <outlet property="newsTitle" destination="fi4-p3-cTk" id="hr4-OQ-v8j"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kfd-xU-Duc" id="NuU-AK-pfI"/>
+                            <outlet property="delegate" destination="kfd-xU-Duc" id="wYs-o1-UQy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ke5-Th-0NT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGk-7d-gfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998" y="38"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IZf-b6-Ycz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JT7-xf-cg9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L7U-Zc-ef8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ddD-vi-naE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpe-PP-Fjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="132.5"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qwT-k0-u41"/>
+    </inferredMetricsTieBreakers>
+</document>
