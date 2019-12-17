@@ -11,14 +11,16 @@ import WebKit
 
 class DetailNewsViiewController: UIViewController {
 
-    var urlSite = ""
+    var urlSite: String? 
     @IBOutlet var webView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = URL(string: urlSite)
-        let request = URLRequest(url: url!)
-        webView.load(request)
+        guard let url = URL(string: self.urlSite ?? "") else { return }
+
+             let request = URLRequest(url: url)
+
+            self.webView.load(request)
     }
 }

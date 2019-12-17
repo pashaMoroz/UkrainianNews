@@ -29,7 +29,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,23 +45,22 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //return newsActions.count
 
         if collectionView == self.collectionView {
-            
-              return newsActions.count
+            return newsActions.count
         }
-            return news.count
+        return news.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if collectionView == self.collectionView {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NewsActionsCell
-        cell.newsActionLabel.text = newsActions[indexPath.item].rawValue
-        return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NewsActionsCell
+            cell.newsActionLabel.text = newsActions[indexPath.item].rawValue
+            return cell
         } else {
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! RandomCollectionViewCell
-                let newsCell = news[indexPath.row]
-                cell2.imageView?.image = UIImage(named: "news.png")
-                cell2.configure(with: newsCell, index: indexPath.row)
+            let newsCell = news[indexPath.row]
+            cell2.imageView?.image = UIImage(named: "news.png")
+            cell2.configure(with: newsCell, index: indexPath.row)
 
             return cell2
         }
@@ -73,23 +71,24 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         if collectionView == self.collectionView {
-        let newsAction = newsActions[indexPath.item]
-        switch newsAction {
-        case .business:
-            performSegue(withIdentifier: "ShowDetailBusiness", sender: nil)
-        case .entertainment:
-            performSegue(withIdentifier: "ShowDetailEntertainment", sender: nil)
-        case .health:
-            performSegue(withIdentifier: "ShowDetailHealth", sender: nil)
-        case .science:
-            performSegue(withIdentifier: "ShowDetailScience", sender: nil)
-        case .sports:
-            performSegue(withIdentifier: "ShowDetailSports", sender: nil)
-        case .technology:
-            performSegue(withIdentifier: "ShowDetailTechnology", sender: nil)
+            let newsAction = newsActions[indexPath.item]
+            switch newsAction {
+            case .business:
+                performSegue(withIdentifier: "ShowDetailBusiness", sender: nil)
+            case .entertainment:
+                performSegue(withIdentifier: "ShowDetailEntertainment", sender: nil)
+            case .health:
+                performSegue(withIdentifier: "ShowDetailHealth", sender: nil)
+            case .science:
+                performSegue(withIdentifier: "ShowDetailScience", sender: nil)
+            case .sports:
+                performSegue(withIdentifier: "ShowDetailSports", sender: nil)
+            case .technology:
+                performSegue(withIdentifier: "ShowDetailTechnology", sender: nil)
+            }
+        } else {
+            performSegue(withIdentifier: "showRandom", sender: nil)
         }
-        }
-
     }
 
     // MARK: - Navigation
@@ -115,8 +114,12 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         case "ShowDetailTechnology":
             newsVC.stringApi = ApiLinks.getApiLinks(.technology)()
             newsVC.title = NewsActions.technology.rawValue
+        case "showRandom":
+            newsVC.stringApi = ApiLinks.getApiLinks(.randomLink)()
+            newsVC.title = "Разное"
         default: break
         }
     }
+
 }
 

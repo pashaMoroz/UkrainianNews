@@ -160,6 +160,7 @@
                         <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailScience" id="iwO-9v-rsy"/>
                         <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailSports" id="JaV-11-UFs"/>
                         <segue destination="kfd-xU-Duc" kind="show" identifier="ShowDetailTechnology" id="NrM-YD-4mG"/>
+                        <segue destination="kfd-xU-Duc" kind="show" identifier="showRandom" id="6Jl-tq-6oE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -303,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQa-Ad-omS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2788" y="130.43478260869566"/>
+            <point key="canvasLocation" x="2977" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IZf-b6-Ycz">
@@ -328,7 +329,7 @@
         <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iwO-9v-rsy"/>
+        <segue reference="6Jl-tq-6oE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>
