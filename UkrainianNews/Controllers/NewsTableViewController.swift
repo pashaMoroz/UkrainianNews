@@ -23,7 +23,6 @@ class NewsTableViewController: UITableViewController {
         super.viewWillAppear(true)
 
         NetworkManager.shared.fetchData(with: stringApi) { [weak self] (news) in
-
             self?.news = news.articles ?? []
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
@@ -40,8 +39,23 @@ class NewsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
 
         let newsCell = news[indexPath.row]
+        cell.newsImage?.image = UIImage(named: "news.png")
         cell.configure(with: newsCell, index: indexPath.row)
         return cell
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let detailVC = segue.destination as! DetailNewsViiewController
+                if news[indexPath.row].url != nil {
+                detailVC.urlSite = news[indexPath.row].url ?? ""
+                detailVC.title = news[indexPath.row].title ?? self.title
+                } else {
+                    return
+                }
+            }
+        }
     }
 
 }

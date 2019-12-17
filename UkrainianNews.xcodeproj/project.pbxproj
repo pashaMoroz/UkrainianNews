@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A9C6A5B6BE15085250DE87 /* Pods_UkrainianNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAD83BA22CC939D3CCFB796 /* Pods_UkrainianNews.framework */; };
+		D704DC4323A91F6900C6D52A /* DetailNewsViiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D704DC4223A91F6900C6D52A /* DetailNewsViiewController.swift */; };
+		D704DC4523A9614C00C6D52A /* RandomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D704DC4423A9614C00C6D52A /* RandomCollectionViewCell.swift */; };
 		D7A4A6B623A398AC006C552A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4A6B523A398AC006C552A /* AppDelegate.swift */; };
 		D7A4A6B823A398AC006C552A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4A6B723A398AC006C552A /* SceneDelegate.swift */; };
 		D7A4A6BA23A398AC006C552A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4A6B923A398AC006C552A /* MainViewController.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DAD83BA22CC939D3CCFB796 /* Pods_UkrainianNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UkrainianNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D704DC4223A91F6900C6D52A /* DetailNewsViiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViiewController.swift; sourceTree = "<group>"; };
+		D704DC4423A9614C00C6D52A /* RandomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7A4A6B223A398AC006C552A /* UkrainianNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UkrainianNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A4A6B523A398AC006C552A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A4A6B723A398AC006C552A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		D7A4A6D723A67C63006C552A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		D7A4A6DA23A68A45006C552A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D7A4A6DC23A6B4D4006C552A /* ApiLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLinks.swift; sourceTree = "<group>"; };
+		D8DBB207E9D2C62042C37B4E /* Pods-UkrainianNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UkrainianNews.debug.xcconfig"; path = "Target Support Files/Pods-UkrainianNews/Pods-UkrainianNews.debug.xcconfig"; sourceTree = "<group>"; };
+		FCB96B35C9F21D986AD42D7A /* Pods-UkrainianNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UkrainianNews.release.xcconfig"; path = "Target Support Files/Pods-UkrainianNews/Pods-UkrainianNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A9C6A5B6BE15085250DE87 /* Pods_UkrainianNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D06566CC13311844BBAC7CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8DBB207E9D2C62042C37B4E /* Pods-UkrainianNews.debug.xcconfig */,
+				FCB96B35C9F21D986AD42D7A /* Pods-UkrainianNews.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5845907DD6EA4A11712F8710 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DAD83BA22CC939D3CCFB796 /* Pods_UkrainianNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7A4A6A923A398AC006C552A = {
 			isa = PBXGroup;
 			children = (
 				D7A4A6B423A398AC006C552A /* UkrainianNews */,
 				D7A4A6B323A398AC006C552A /* Products */,
+				3D06566CC13311844BBAC7CF /* Pods */,
+				5845907DD6EA4A11712F8710 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +139,7 @@
 				D7A4A6D523A675FB006C552A /* Cell */,
 				D7A4A6B923A398AC006C552A /* MainViewController.swift */,
 				D7A4A6CD23A67554006C552A /* NewsTableViewController.swift */,
+				D704DC4223A91F6900C6D52A /* DetailNewsViiewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D7A4A6C923A3F991006C552A /* NewsActionsCell.swift */,
+				D704DC4423A9614C00C6D52A /* RandomCollectionViewCell.swift */,
 				D7A4A6CF23A675A2006C552A /* NewsTableViewCell.swift */,
 			);
 			path = Cell;
@@ -148,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7A4A6C623A398AE006C552A /* Build configuration list for PBXNativeTarget "UkrainianNews" */;
 			buildPhases = (
+				BFAD61C614B56B3BD6A43B5F /* [CP] Check Pods Manifest.lock */,
 				D7A4A6AE23A398AC006C552A /* Sources */,
 				D7A4A6AF23A398AC006C552A /* Frameworks */,
 				D7A4A6B023A398AC006C552A /* Resources */,
+				41A026578850E6C3F7E45738 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +239,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41A026578850E6C3F7E45738 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UkrainianNews/Pods-UkrainianNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UkrainianNews/Pods-UkrainianNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UkrainianNews/Pods-UkrainianNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFAD61C614B56B3BD6A43B5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UkrainianNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7A4A6AE23A398AC006C552A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -216,6 +290,8 @@
 				D7A4A6BA23A398AC006C552A /* MainViewController.swift in Sources */,
 				D7A4A6B623A398AC006C552A /* AppDelegate.swift in Sources */,
 				D7A4A6D023A675A2006C552A /* NewsTableViewCell.swift in Sources */,
+				D704DC4523A9614C00C6D52A /* RandomCollectionViewCell.swift in Sources */,
+				D704DC4323A91F6900C6D52A /* DetailNewsViiewController.swift in Sources */,
 				D7A4A6DD23A6B4D4006C552A /* ApiLinks.swift in Sources */,
 				D7A4A6DB23A68A45006C552A /* NetworkManager.swift in Sources */,
 				D7A4A6CA23A3F991006C552A /* NewsActionsCell.swift in Sources */,
@@ -362,6 +438,7 @@
 		};
 		D7A4A6C723A398AE006C552A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8DBB207E9D2C62042C37B4E /* Pods-UkrainianNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +457,7 @@
 		};
 		D7A4A6C823A398AE006C552A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCB96B35C9F21D986AD42D7A /* Pods-UkrainianNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
