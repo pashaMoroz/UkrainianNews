@@ -20,16 +20,15 @@ class NewsTableViewCell: UITableViewCell {
         newsDescript.text = news.description
 
         DispatchQueue.global().async {
-            guard let stringURL = news.urlToImage else { return }
-            guard let imageURL = URL(string: stringURL) else { return }
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-            
-            DispatchQueue.main.async {
-                self.newsImage.image = UIImage(data: imageData)
+
+            NetworkManager.shared.fetchDataImage(url: news.urlToImage ?? "" ) { (image) in
+                DispatchQueue.main.async {
+                    self.newsImage?.image = image
+                }
             }
         }
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         newsImage.image = nil
